@@ -4,7 +4,6 @@
     <router-view></router-view>
     <!-- 在home或search下是显示的 -->
     <Footer v-show="$route.meta.show"/>
-   
   </div>
 </template>
 
@@ -26,5 +25,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-
+  //对于使用到less的同时有想要使用css可以写两个style 
+  // 同理对于scoped也可以写多个来控制是否限制当前页使用
 </style>
