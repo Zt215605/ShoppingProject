@@ -132,7 +132,7 @@ export default {
     async open() {
       // 生成二维码(地址)
       let url = await QRCode.toDataURL(this.payInfo.codeUrl);
-      // 注意这里变量和/之间要留一个空格，不然会出现图片出不来
+      // 注意这里变量和/之间要留一个空格，不然会出现图片出不来    //个人注释：这里${url}使用引号引起来就不能存在图片出不来得问题，因为不用引号引起来不空格会给/也当作src中得一部分
       this.$alert(`<img src=${url} />`, "请你微信支付", {
         dangerouslyUseHTMLString: true,
         // 中间布局
